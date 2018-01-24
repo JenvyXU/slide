@@ -12,7 +12,24 @@
 .images>img{
     width: 100%;
     transition: all 0.3s;
+    position: absolute;
+    top: 0;
 }
+.images>img.current{
+    left: 0;
+    transform: translateX(0);
+    z-index: 1;
+}
+.images>img.leave{
+    transform: translateX(-100%);
+    z-index: 1;/*保持在顶层显示*/
+}
+.images>img.enter{
+    transform: translateX(100%);
+
+}
+
+/*
 .images>img:nth-child(1){
     position: absolute;
     top: 0;
@@ -33,3 +50,4 @@
     top: 0;
     left: 100%;
 }
+*/
